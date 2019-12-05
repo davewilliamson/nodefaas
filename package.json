@@ -1,0 +1,23 @@
+{
+  "name": "nodefaas",
+  "version": "0.0.1",
+  "description": "Node OpenFaas connector",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davewilliamson/nodefaas.git"
+  },
+  "keywords": [],
+  "author": "Dave Williamson <dave@ukit.net> (https://github.com/davewilliamson)",
+  "license": "None",
+  "bugs": {
+    "url": "https://github.com/davewilliamson/nodefaas/issues"
+  },
+  "homepage": "https://github.com/davewilliamson/nodefaas#readme",
+  "dependencies": {
+    "node-fetch": "^2.6.0"
+  }
+}
