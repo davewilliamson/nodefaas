@@ -10,14 +10,25 @@
     "type": "git",
     "url": "git+https://github.com/davewilliamson/nodefaas.git"
   },
-  "keywords": [],
+  "keywords": [
+    "openfaas",
+    "faas",
+    "async",
+    "functions",
+    "serverless"
+  ],
   "author": "Dave Williamson <dave@ukit.net> (https://github.com/davewilliamson)",
-  "license": "None",
+  "license": "LICENSE",
   "bugs": {
     "url": "https://github.com/davewilliamson/nodefaas/issues"
   },
   "homepage": "https://github.com/davewilliamson/nodefaas#readme",
   "dependencies": {
     "node-fetch": "^2.6.0"
+  },
+  "devDependencies": {
+    "dotenv": "^8.2.0",
+    "hirestime": "^4.0.0",
+    "uuid": "^3.3.3"
   }
 }

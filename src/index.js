@@ -16,14 +16,7 @@ const DEFAULT_AGENT_SETTINGS = {
  * @param {number} status - A status code either returned from Openfass or this lib (standard HTML response codes).
  * @param {string} statusText - A message relating to the returned status code
  */
-class NodeFaasError extends Error {
-    constructor(message, status, statusText) {
-        super(message);
-        this.name = "NodeFaasError";
-        this.status = status;
-        this.statusText = statusText;
-    }
-}
+
 
 async function remoteCall(gateway, func, data, { isJson = false, isBinaryResponse = false, method, compress = true, agent = undefined } = {}) {
 
@@ -110,12 +103,10 @@ class NodeFaas {
     }
 
     async list({ isJson = true } = {}) {
-        this._checkCredentials();
         return await remoteCall(this.secureGateway || this.gateway, SYSTEM_FUNCTIONS, undefined, { isJson, agent: this.agent });
     }
 
     async inspect(func) {
-        this._checkCredentials();
         const list = await this.list();
         for (let i = 0; i < list.length; i++) {
             if (list[i].name === func) {
@@ -125,12 +116,10 @@ class NodeFaas {
     }
 
     async deploy(func, image, { network = 'func_functions' } = {}) {
-        this._checkCredentials();
         return await remoteCall(this.secureGateway || this.gateway, SYSTEM_FUNCTIONS, { service: func, image, network }, { isJson: true, agent: this.agent });
     }
 
     async remove(name) {
-        this._checkCredentials();
         return await remoteCall(this.secureGateway || this.gateway, SYSTEM_FUNCTIONS, { functionName: name }, { isJson: true, method: 'DELETE', agent: this.agent });
     }
 }
