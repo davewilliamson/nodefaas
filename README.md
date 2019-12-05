@@ -5,7 +5,7 @@ This library is inspired by the work of [Austin Frey](https://www.npmjs.com/pack
 
 ### Installation
 ```
-npm i nodefass
+npm i nodefaas
 ```
 
 ### Basic Usage
