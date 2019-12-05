@@ -1,0 +1,2 @@
+# nodefaas
+Node OpenFaas connector
