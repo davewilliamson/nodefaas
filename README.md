@@ -1,3 +1,5 @@
+[![NPM Downloads][downloads-image]][downloads-url]
+
 # nodefaas
 Node OpenFaas connector that utilises async/await and [node-fetch](https://www.npmjs.com/package/node-fetch)
 
@@ -148,3 +150,6 @@ Executing 10: 60.22ms
 Removing test figlet
 { status: 202, statusText: 'Accepted', body: '' }
 ```
+
+[downloads-image]: https://img.shields.io/npm/dm/nodefaas.svg
+[downloads-url]: https://npmjs.org/package/nodefaas
